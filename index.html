@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LocalAds</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <script src="js/main.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul class="nav-list">
+          <li><a href="index.html">Strona Główna</a></li>
+          <li><a href="ad-form.html">Dodaj Ogłoszenie</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section id="logo">
+        <div id="logo">
+          <img src="img/Logo.png" alt="logo" />
+          <h1>LocalAds</h1>
+        </div>
+      </section>
+      <section id="filter-section">
+        <h2>Sortuj ogłoszenia</h2>
+        <label for="category-filter">Wybierz kategorię:</label>
+        <select id="category-filter">
+          <option value="wszystkie">Wszystkie</option>
+          <option value="motoryzacja">Motoryzacja</option>
+          <option value="nieruchomości">Nieruchomości</option>
+          <option value="elektronika">Elektronika</option>
+        </select>
+        <label for="price-sort">Sortuj wg ceny:</label>
+        <input type="checkbox" id="price-sort" />
+      </section>
+      <section id="ads-list">
+        <!-- Lista ogłoszeń będzie generowana dynamicznie -->
+      </section>
+    </main>
+
+    <!-- Modal do edycji ogłoszenia -->
+    <div id="edit-modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Edytuj Ogłoszenie</h2>
+        <form id="edit-form">
+          <input type="hidden" id="edit-id" />
+          <label for="edit-title">Tytuł:</label>
+          <input type="text" id="edit-title" name="title" required />
+
+          <label for="edit-description">Opis:</label>
+          <textarea
+            id="edit-description"
+            name="description"
+            required
+          ></textarea>
+
+          <label for="edit-category">Kategoria:</label>
+          <select id="edit-category" name="category">
+            <option value="motoryzacja">Motoryzacja</option>
+            <option value="nieruchomości">Nieruchomości</option>
+            <option value="elektronika">Elektronika</option>
+          </select>
+
+          <label for="edit-price">Cena:</label>
+          <input type="number" id="edit-price" name="price" required />
+
+          <label for="edit-contact">Kontakt:</label>
+          <input type="text" id="edit-contact" name="contact" required />
+
+          <button type="submit">Zapisz Zmiany</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dodaj Ogłoszenie</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <script src="js/main.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul class="nav-list">
+          <li><a href="index.html">Strona Główna</a></li>
+          <li><a href="ad-form.html">Dodaj Ogłoszenie</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section id="logo">
+        <div id="logo">
+          <img src="img/Logo.png" alt="logo" />
+          <h1>LocalAds</h1>
+        </div>
+      </section>
+      <section id="form-section">
+        <div class="form-container">
+          <h2>Dodaj Ogłoszenie</h2>
+          <form id="ad-form">
+            <label for="title">Tytuł:</label>
+            <input type="text" id="title" name="title" required />
+
+            <label for="description">Opis:</label>
+            <textarea id="description" name="description" required></textarea>
+
+            <label for="category">Kategoria:</label>
+            <select id="category" name="category">
+              <option value="motoryzacja">Motoryzacja</option>
+              <option value="nieruchomości">Nieruchomości</option>
+              <option value="elektronika">Elektronika</option>
+            </select>
+
+            <label for="price">Cena:</label>
+            <input type="number" id="price" name="price" required />
+
+            <label for="contact">Kontakt:</label>
+            <input type="text" id="contact" name="contact" required />
+
+            <button type="submit">Dodaj Ogłoszenie</button>
+          </form>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
