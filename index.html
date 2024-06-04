@@ -12,6 +12,12 @@
       <nav>
         <ul class="nav-list">
           <li><a href="index.html">Strona Główna</a></li>
+          <li>
+            <div id="time">
+              <script src="js/time.js"></script>
+            </div>
+          </li>
+
           <li><a href="ad-form.html">Dodaj Ogłoszenie</a></li>
         </ul>
       </nav>
@@ -36,11 +42,10 @@
         <input type="checkbox" id="price-sort" />
       </section>
       <section id="ads-list">
-        <!-- Lista ogłoszeń będzie generowana dynamicznie -->
+        <!-- Lista ogłoszeń jest generowana dynamicznie -->
       </section>
     </main>
 
-    <!-- Modal do edycji ogłoszenia -->
     <div id="edit-modal" class="modal">
       <div class="modal-content">
         <span class="close">&times;</span>
@@ -68,7 +73,14 @@
           <input type="number" id="edit-price" name="price" required />
 
           <label for="edit-contact">Kontakt:</label>
-          <input type="text" id="edit-contact" name="contact" required />
+          <input
+            type="text"
+            id="edit-contact"
+            name="contact"
+            pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}"
+            placeholder="123-456-789"
+            required
+          />
 
           <button type="submit">Zapisz Zmiany</button>
         </form>

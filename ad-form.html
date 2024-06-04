@@ -28,10 +28,21 @@
           <h2>Dodaj Ogłoszenie</h2>
           <form id="ad-form">
             <label for="title">Tytuł:</label>
-            <input type="text" id="title" name="title" required />
+            <input
+              type="text"
+              id="title"
+              name="title"
+              required
+              maxlength="100"
+            />
 
             <label for="description">Opis:</label>
-            <textarea id="description" name="description" required></textarea>
+            <textarea
+              id="description"
+              name="description"
+              required
+              maxlength="1000"
+            ></textarea>
 
             <label for="category">Kategoria:</label>
             <select id="category" name="category">
@@ -44,7 +55,14 @@
             <input type="number" id="price" name="price" required />
 
             <label for="contact">Kontakt:</label>
-            <input type="text" id="contact" name="contact" required />
+            <input
+              type="text"
+              id="contact"
+              name="contact"
+              pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}"
+              placeholder="123-456-789"
+              required
+            />
 
             <button type="submit">Dodaj Ogłoszenie</button>
           </form>
